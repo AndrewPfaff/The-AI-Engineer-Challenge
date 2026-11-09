@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #f4f1ec;
+  --color-ink: #16141c;
+  --color-muted: #5c574e;
+  --color-line: #e4ddd3;
+  --color-accent: #5b4dff;
+  --color-accent-hover: #4338ca;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-display), "Iowan Old Style", Georgia, serif;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #dcd6ff;
+  color: var(--color-ink);
+}
