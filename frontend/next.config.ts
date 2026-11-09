@@ -7,6 +7,9 @@ const frontendRoot = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   agentRules: false,
+  // Vercel's legacy @vercel/next builder (used via vercel.json builds)
+  // cannot patch preview comments when Next 16.3+ immutable assets are on.
+  supportsImmutableAssets: false,
   // Locally, the browser talks to this Next app and /api/* is proxied to FastAPI.
   // On Vercel these rewrites are skipped so /api/chat hits api/index.py instead.
   async rewrites() {
